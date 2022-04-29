@@ -1,0 +1,3 @@
+This is a simple website to allow entry and viewing of photos. It could be used for a competition. When the photo is uploaded the user puts in their name and ensures the filename is the name they want for their image. The image will then be displayed with the image name and user name for everyone to see.
+
+I don't have a lot of experince setting up a new server so I just used local files for this project. The use of these files would be replaced by a database so that photos can be shared between users.
