@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using StreambaTechTest.Models
+@model IEnumerable<Image>
+
+@{List<Image> images = Model.ToList();}
+
+<head>
+    <link rel="stylesheet" href="~/Content/MainStyle.css">
+</head>
+
+<body>
+    <h1>All Entered Images!</h1>
+    <div id="main-display">
+        @for(int i = 0; i < images.Count(); i += 2)
+         {
+            <div class="display-row">
+                <div class="display-container">
+                    <img src=@images[i].Scr>
+                    <p>@images[i].ImageName By @images[i].UserName</p>
+                </div>
+                <div class="display-container">
+                    <img src=@images[i+1].Scr>
+                    <p>@images[i+1].ImageName By @images[i+1].UserName</p>
+                </div>
+            </div>
+         }
+    </div>
+</body>

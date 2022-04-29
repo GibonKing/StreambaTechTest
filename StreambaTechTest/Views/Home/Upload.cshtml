@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Upload";
+}
+
+<head>
+    <link rel="stylesheet" href="~/Content/MainStyle.css">
+</head>
+
+<body>
+    <div id="drop-area">
+        <h1>Upload Pictures!</h1>
+        <form class="my-form">
+            <p>Please enter your full name and drag the photos you wish to upload. Please ensure the file name is the same as the image name.</p>
+            <input type="text" id="name" placeholder="Full Name" />
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+            <input type="submit" id="upload-button" value="Upload" onclick="upload()" />
+        </form>
+        <progress id="progress-bar" max="100" value="0" style="display:none"></progress>
+    </div>
+    <div id="gallery"></div>
+</body>
+
+<footer>
+    <script src="~/Scripts/UploadScript.js"></script>
+</footer>
